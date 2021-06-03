@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Hitung Diskon</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+     
+</head>
+<body>
+  <fieldset>
+    <legend class="makan"> Diskon</legend>
+  <h3 style="text-align: center;">Menentukan harga </h3>
+
+	<form name="namaform">
+		<pre>
+
+	Nama Pembeli    : <input type ="text " name="first"  class="custom-input" />
+	<br>
+	Jumlah pembelian :<input type="text" name="second"/ class="custom-input">
+	<br>
+	<button type ="button" value="jumlahterbayar" onclick="hitung()"
+	 class="btn-primary"/> Submit</button>
+	<br>
+
+
+</pre>
+	</form >
+</fieldset>
+	<script>
+		function hitung() {
+			var nilai1=(document.namaform.first.value);
+		    var nilai2=(document.namaform.second.value);
+			var diskon="";
+			var jumlahterbayar= "";
+			 
+
+			 if(nilai2 >= 80000) {
+			 	diskon =((30/100) *nilai2);
+			 	jumlahterbayar =(nilai2-diskon); 
+
+			 		} else if(nilai2 >=50000) {
+			 		diskon=((21.1/100) * nilai2);
+			 		jumlahterbayar=(nilai2-diskon);
+
+			 		}  else {
+			 			diskon=(0);
+			 			jumlahterbayar=(nilai2-diskon);
+
+			 		}
+            alert(" nama pembeli " +  nilai1  + "  jumlah pembelian " + nilai2 +"jumlah diskon " +  diskon 
+             + " yang harus dibayar adalah "  +
+			 	jumlahterbayar)
+
+			 
+			
+		}
+		
+	</script>
+</body>
+</html>
